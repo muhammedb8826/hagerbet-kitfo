@@ -1,0 +1,6 @@
+.rounded-custom {
+    @apply rounded-tl-xl rounded-br-xl;
+    &--lg {
+        @apply rounded-tl-3xl rounded-br-3xl;
+    }
+}

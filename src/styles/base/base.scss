@@ -1,0 +1,38 @@
+html,
+body {
+    @apply text-neutral-200 bg-neutral-900;
+    padding: 0;
+    margin: 0;
+    // overflow-x: hidden;
+    font-family: $font-family-base;
+}
+
+p {
+    letter-spacing: 0.2px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+@include dark-theme {
+    // @apply text-neutral-100;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
+
+
+.bento {
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 0.8fr 0.5fr;
+}

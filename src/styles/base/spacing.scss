@@ -1,0 +1,47 @@
+.container {
+  max-width: 1650px;
+  width: 86vw;
+  margin-left: auto;
+  margin-right: auto;
+  &--sm {
+    max-width: 1350px;
+  }
+  &--xs {
+    max-width: 980px;
+  }
+}
+
+// .container {
+//     max-width: 97%;
+//     @include sm {
+//       width: 600px;
+//     }
+//     @include md {
+//       width: 984px;
+//     }
+//     @include lg {
+//       width: 1240px;
+//     }
+//     @include xl {
+//       width: 1240px;
+//     }
+//     @include xxl {
+//       width: 1464px;
+//     }
+//   }
+
+$section-padding: 4rem;
+
+.py-section {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+.pt-section {
+  padding-top: $section-padding;
+}
+.pb-section {
+  padding-bottom: $section-padding;
+}
+.mt-section {
+  margin-top: $section-padding;
+}
