@@ -16,7 +16,7 @@ export default function Hero() {
     if (loaded) {
       animationControls.start("visible");
     }
-  }, [loaded]);
+  }, [loaded, animationControls]);
 
   const animationVariants = {
     visible: { opacity: 1 },
@@ -69,9 +69,9 @@ export default function Hero() {
               {/* <Button variant="outlined">Secondary</Button> */}
             </div>
             <div className="absolute flex flex-row items-center gap-8 left-20 bottom-20">
-              <SocialLink variant="facebook" url="https://facebook.com/"/>
-              <SocialLink variant="instagram" url="https://instagram.com/"/>
-              <SocialLink variant="twitter" url="https://twitter.com/"/>
+              <SocialLink variant="facebook" url="https://facebook.com/" />
+              <SocialLink variant="instagram" url="https://instagram.com/" />
+              <SocialLink variant="twitter" url="https://twitter.com/" />
               <div className="w-80 h-[1px] bg-neutral-500"></div>
             </div>
           </div>

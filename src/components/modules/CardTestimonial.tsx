@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-export default function CardTestimonial() {
+type Props = {
+  name: string;
+  avatarUrl: string;
+  content: string;
+};
+
+export default function CardTestimonial({ content, name, avatarUrl }: Props) {
   return (
     <div className="p-8 mx-auto text-center bg-white shadow-sm rounded-custom lg:px-6 ">
       <figure className="max-w-screen-md mx-auto">
@@ -18,7 +24,9 @@ export default function CardTestimonial() {
         </svg>
         <blockquote>
           <p className="text-lg text-neutral-900">
-            "It was an exquisite experience. The flavors were authentic and rich, truly capturing the essence of Asian cuisine. The staff was attentive and the ambiance, perfect. I can't wait to return"
+            &quot;
+            {content}
+            &quot;
           </p>
         </blockquote>
         <figcaption className="flex items-center justify-center mt-6 space-x-3">
@@ -26,16 +34,12 @@ export default function CardTestimonial() {
             className="w-12 h-12 rounded-full"
             width={50}
             height={50}
-            src={
-              "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-            }
+            src={avatarUrl}
             loading="lazy"
-            alt=""
+            alt={name}
           />
           <div className="flex items-center divide-x-2 divide-neutral-500">
-            <div className="pr-3 font-medium text-neutral-900">
-              Micheal Gough
-            </div>
+            <div className="pr-3 font-medium text-neutral-900">{name}</div>
           </div>
         </figcaption>
       </figure>
