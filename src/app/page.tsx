@@ -19,14 +19,14 @@ import Products from "@/components/layout/menu/Products";
 import Categories from "@/components/layout/Categories";
 import Banner from "@/components/layout/Banner";
 import DividerSharp from "@/components/layout/DividerSharp";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <PageWrapper>
       <Hero />
       {/* <div className="relative w-full h-24 -mt-20 rounded-tl-full rounded-tr-full bg-light-ivory"></div> */}
-      <Categories pt="xl"/>
+      <Categories pt="xl" />
       <About />
       <DividerSharp />
       <Banner />
@@ -34,6 +34,6 @@ export default function Home() {
       <Products />
       <Contact />
       <Footer />
-    </>
+    </PageWrapper>
   );
 }

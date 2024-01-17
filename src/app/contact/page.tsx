@@ -1,13 +1,12 @@
 import Contact from "@/components/layout/Contact";
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 export default function ContactPage() {
   return (
-    <main className="bg-light-ivory">
-      <Header />
+    <PageWrapper className="bg-light-ivory">
       <Contact />
       <Footer />
-    </main>
+    </PageWrapper>
   );
 }
