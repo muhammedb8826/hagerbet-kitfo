@@ -4,3 +4,9 @@
         @apply rounded-tl-3xl rounded-br-3xl;
     }
 }
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

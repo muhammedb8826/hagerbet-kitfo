@@ -18,9 +18,7 @@ export default function CardTestimonial() {
         </svg>
         <blockquote>
           <p className="text-lg text-neutral-900">
-           "Flowbite is just awesome. It contains tons of predesigned
-            components and pages starting from login screen to complex
-            dashboard. Perfect choice for your next SaaS application."
+            "It was an exquisite experience. The flavors were authentic and rich, truly capturing the essence of Asian cuisine. The staff was attentive and the ambiance, perfect. I can't wait to return"
           </p>
         </blockquote>
         <figcaption className="flex items-center justify-center mt-6 space-x-3">

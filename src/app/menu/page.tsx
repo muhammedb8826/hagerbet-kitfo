@@ -1,12 +1,14 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import Products from "@/components/layout/Products";
+import Menu from "@/components/layout/menu/Menu";
+import ProductsFeatured from "@/components/layout/menu/ProductsFeatured";
 
 export default function MenuPage() {
   return (
     <main className="bg-light-ivory">
       <Header />
-      <Products />
+      <ProductsFeatured pb="xl"/>
+      <Menu pt="xl" pb="xl"/>
       <Footer />
     </main>
   );

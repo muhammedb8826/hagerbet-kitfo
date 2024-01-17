@@ -4,7 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -13,20 +13,20 @@ module.exports = {
       colors: {
         "light-ivory": "#F7F6F1",
         primary: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#FE7488',
-          400: '#FE7488',
-          500: '#DA4438',
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-          950: '#431407',
+          50: "#fff7ed",
+          100: "#f8dad7",
+          200: "#f0b4af",
+          300: "#e98f88",
+          400: "#e16960",
+          500: "#da4438",
+          600: "#ae362d",
+          700: "#832922",
+          800: "#571b16",
+          900: "#2c0e0b",
+          950: "#431407",
         },
-      }
+      },
     },
   },
   plugins: [],
-}
+};

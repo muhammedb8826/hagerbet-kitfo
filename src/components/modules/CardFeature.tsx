@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CardFeature() {
   return (
-    <section className="flex flex-col items-center p-8 space-y-3 text-center bg-white shadow-sm rounded-custom">
+    <section className="flex flex-col items-center p-8 space-y-3 text-center bg-white shadow-md rounded-custom">
       <span className="inline-block p-3 rounded-full text-primary-500 bg-primary-100 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

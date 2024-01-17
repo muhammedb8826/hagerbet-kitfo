@@ -3,7 +3,7 @@ import CardFeature from "../modules/CardFeature";
 
 export default function Features() {
   return (
-    <section className="bg-light-ivory py-section">
+    <section id="Features" className="bg-white py-section">
       <div className="container container--sm">
         <h2 className="mb-8 text-2xl font-semibold text-center capitalize lg:mb-12 text-neutral-800 lg:text-3xl">
           explore our

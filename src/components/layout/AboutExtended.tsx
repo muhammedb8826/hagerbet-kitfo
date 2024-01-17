@@ -9,7 +9,7 @@ import Image6 from "@/public/bento/bento-6.jpg";
 export default function AboutExtended() {
   return (
     <>
-      <section className="bg-light-ivory py-section">
+      <section id="AboutExtended" className="bg-light-ivory py-section">
         <div className="container container--xs">
           <div className="grid gap-4 lg:grid-cols-2">
             <Image
