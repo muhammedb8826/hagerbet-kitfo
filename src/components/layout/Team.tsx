@@ -1,57 +1,49 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
+import Team1 from "@/public/team/team-1.avif";
+import Team2 from "@/public/team/team-2.avif";
+import Team3 from "@/public/team/team-3.avif";
+import Team4 from "@/public/team/team-4.avif";
+import Team5 from "@/public/team/team-5.avif";
 
 interface TeamMember {
   id: number;
   name: string;
   role: string;
-  imageUrl: string;
+  imageUrl: StaticImageData | string;
 }
 
 const teamMembers: (TeamMember | undefined)[] = [
   {
     id: 0,
-    name: "Ahmed Omer",
+    name: "Kenji Sato",
     role: "Executive Chef",
-    imageUrl:
-      "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80",
+    imageUrl: Team3,
   },
   {
     id: 1,
-    name: "Jane Doe",
+    name: "Hiroshi Tanaka",
     role: "Head Chef",
-    imageUrl:
-      "https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    imageUrl: Team4,
   },
   {
     id: 2,
     name: "Steve Ben",
     role: "Chef",
-    imageUrl:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80",
+    imageUrl: Team2,
   },
   {
     id: 3,
     name: "Patterson Johnson",
-    role: "Waitress",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    role: "Chef",
+    imageUrl: Team1,
   },
   ,
   {
     id: 4,
-    name: "Patterson Johnson",
+    name: "John Petterson",
     role: "Waiter",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-  },
-  ,
-  {
-    id: 5,
-    name: "Patterson Johnson",
-    role: "Waiter",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    imageUrl: Team5,
   },
 ];
 
@@ -61,7 +53,7 @@ export default function Team() {
       <div id="staff" className="absolute -top-20"></div>
       <div className="container">
         <div>
-          <h2 className="mb-8 text-2xl font-brush font-semibold text-center capitalize lg:mb-12 text-neutral-200 lg:text-3xl">
+          <h2 className="mb-8 text-2xl font-semibold text-center capitalize font-brush lg:mb-12 text-neutral-200 lg:text-3xl">
             Our Team
           </h2>
           <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
-import bg from "@/public/hero-bg.webp";
+import bg from "@/public/hero-bg.avif";
 import Link from "next/link";
 import LogoSVG from "../svg/LogoSVG";
 import Image from "next/image";
@@ -51,39 +51,58 @@ export default function Hero() {
       </motion.div>
       <div className="container z-10 w-full h-full mx-auto">
         <div className="grid w-full h-full grid-cols-2 mx-auto">
-          <div className="z-10 flex flex-col self-center max-w-xl ">
-            <Animated type="spring" delay={1.0} duration={0.8} variant="top-sm">
-              <LogoSVG width={150} height={150} />
-            </Animated>
-            <Animated
-              as="h1"
-              delay={0.4}
-              variant="right"
-              className="mb-4 text-5xl font-semibold font-brush text-neutral-200"
-            >
-              Lorem ipsum dolor
-              <br />
-              <span className="text-primary-500">Sit amet</span>
-            </Animated>
-
-            <Animated as="p" delay={0.6} variant="right">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, excepturi hic delectus sint officiis sunt.
-            </Animated>
-            <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
-              <Link href="/menu#menu">
-                <Button variant="primary">Explore menu</Button>
-              </Link>
-              {/* <Button variant="outlined">Secondary</Button> */}
-            </Animated>
-            <div className="absolute flex flex-row items-center gap-8 left-20 bottom-20">
-              <Animated type="spring" delay={1.2} duration={0.5} variant="top-sm">
+          <div className="z-10 flex flex-col self-center justify-between h-full max-w-xl py-8">
+            <div></div>
+            <div>
+              <Animated type="spring" delay={1.0} duration={0.8} variant="top-sm">
+                <LogoSVG width={150} height={150} />
+              </Animated>
+              <Animated
+                as="h1"
+                delay={0.4}
+                variant="right"
+                className="mb-4 text-5xl font-semibold font-brush text-neutral-200"
+              >
+                Savor the Art
+                <br />
+                <span className="text-primary-500">of Japanese Cuisine</span>
+              </Animated>
+              <Animated as="p" delay={0.6} variant="right">
+                Embark on a culinary journey through the heart of Japan with our
+                authentic sushi and ramen dishes. Each bite is a testament to the
+                mastery of traditional techniques and the purity of fresh,
+                locally-sourced ingredients.
+              </Animated>
+              <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
+                <Link href="/menu#menu">
+                  <Button variant="primary">Explore menu</Button>
+                </Link>
+                {/* <Button variant="outlined">Secondary</Button> */}
+              </Animated>
+            </div>
+            <div className="flex flex-row items-center gap-8 left-40 bottom-20">
+              <Animated
+                type="spring"
+                delay={1.2}
+                duration={0.5}
+                variant="top-sm"
+              >
                 <SocialLink variant="facebook" url="https://facebook.com/" />
               </Animated>
-              <Animated type="spring" delay={1.35} duration={0.5} variant="top-sm">
+              <Animated
+                type="spring"
+                delay={1.35}
+                duration={0.5}
+                variant="top-sm"
+              >
                 <SocialLink variant="instagram" url="https://instagram.com/" />
               </Animated>
-              <Animated type="spring" delay={1.5} duration={0.5} variant="top-sm">
+              <Animated
+                type="spring"
+                delay={1.5}
+                duration={0.5}
+                variant="top-sm"
+              >
                 <SocialLink variant="twitter" url="https://twitter.com/" />
               </Animated>
 

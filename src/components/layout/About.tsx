@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Image1 from "@/public/about/about-1.jpg";
+import Image1 from "@/public/about/about-1.avif";
 import Image2 from "@/public/about/about-2.jpg";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
@@ -11,25 +11,26 @@ export default function About() {
       <section id="About" className="bg-light-ivory py-section">
         <ScrollAnimated variant="left" className="container container--sm">
           <div className="items-center gap-16 lg:grid lg:grid-cols-2">
-            <ScrollAnimated variant="right" className="font-light text-neutral-800 sm:text-lg">
+            <ScrollAnimated
+              variant="right"
+              className="font-light text-neutral-800 sm:text-lg"
+            >
               <h2 className="relative mb-4 text-4xl font-bold font-brush text-neutral-900">
-                <span className="relative z-10">
-                  About us
-                </span>
+                <span className="relative z-10">About us</span>
                 {/* <span className="absolute -left-2 -bottom-4 z-1">
                   <BrushSVG width={200} height={50} />
                 </span> */}
               </h2>
 
               <p className="mb-2 text-lg font-bold">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Nesciunt nisi est sed.
+                A Journey of Taste and Tradition.
               </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Deleniti voluptatibus quidem temporibus tempore ea, voluptas
-                expedita cum laboriosam reprehenderit nihil, commodi ipsa qui
-                non. Itaque cumque necessitatibus repudiandae vero pariatur?
+              <p className="text-base">
+                Asian Food has been a home for genuine Japanese cooking for a
+                decade. We started out with a love for true Japanese flavors and
+                a wish to bring them to everyone. Our chefs, known for their
+                careful craft and commitment, put together dishes that truly
+                reflect the heart of Japan's cooking traditions.
               </p>
               <div className="flex flex-row gap-4 mt-6">
                 <Link href="/about">
@@ -40,22 +41,26 @@ export default function About() {
                 </Link>
               </div>
             </ScrollAnimated>
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="w-full rounded-lg">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="w-full mb-8 rounded-lg">
                 <Image
-                  className="rounded-custom"
+                  className="relative z-10 object-cover w-full h-full rounded-custom"
                   width={284}
-                  height={394}
-                  src={Image1}
-                  alt=""
+                  height={434}
+                  src={
+                    "https://images.unsplash.com/photo-1564632302631-c3670e71f579?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
+                  alt="Chef working on a dish"
                 />
               </div>
               <div className="relative w-full mt-4 rounded-lg lg:mt-10">
                 <Image
-                  className="relative z-10 rounded-custom"
+                  className="relative z-10 object-cover w-full h-full rounded-custom"
                   width={284}
-                  height={394}
-                  src={Image2}
+                  height={434}
+                  src={
+                    "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
                   alt=""
                 />
               </div>

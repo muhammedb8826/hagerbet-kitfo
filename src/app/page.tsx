@@ -29,7 +29,7 @@ export default function Home() {
       <Categories pt="xl" />
       <About />
       <DividerSharp />
-      <Banner />
+      {/* <Banner /> */}
       {/* <Features /> */}
       <Products />
       <Contact />
