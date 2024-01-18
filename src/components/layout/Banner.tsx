@@ -3,14 +3,15 @@ import Button from "../ui/Button";
 import Link from "next/link";
 import Image from "next/image";
 import Image6 from "@/public/bento/bento-6.jpg";
+import ScrollAnimated from "./ScrollAnimated";
 
 export default function Banner() {
   return (
     <section id="Banner" className="py-section bg-neutral-900">
-      <div className="container mx-auto container--sm">
+      <ScrollAnimated className="container mx-auto container--sm">
         <div className="grid w-full h-full grid-cols-2 mx-auto">
           <div className="flex flex-col self-center max-w-xl">
-            <h2 className="mb-4 text-5xl font-semibold text-neutral-200">
+            <h2 className="mb-4 text-5xl font-brush font-semibold text-neutral-200">
               Lorem ipsum dolor
               <br />
               <span className="text-primary-500">Sit amet</span>
@@ -34,7 +35,7 @@ export default function Banner() {
             alt={"Lorem ipsum dolor"}
           />
         </div>
-      </div>
+      </ScrollAnimated>
     </section>
   );
 }

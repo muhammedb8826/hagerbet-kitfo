@@ -116,7 +116,7 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
     <section
       id="Menu"
       className={clsx(
-        "bg-ivory-light relative",
+        "bg-light-ivory relative",
         paddingTop[pt],
         paddingBot[pb]
       )}

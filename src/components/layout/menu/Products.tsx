@@ -5,6 +5,7 @@ import Product from "../../modules/Product/Product";
 import BrushSVG from "../../svg/BrushSVG";
 import Ramen1 from "@/public/products/ramen/ramen-shoyu.avif";
 import Ramen2 from "@/public/products/ramen/ramen-miso.avif";
+import ScrollAnimated from "../ScrollAnimated";
 
 const products = [
   {
@@ -46,10 +47,10 @@ const products = [
 export default function Products() {
   return (
     <section id="Products" className="bg-neutral-900 py-section">
-      <div className="container container--sm">
+      <ScrollAnimated className="container container--sm">
         <div className="mx-auto">
           <h2 className="relative mb-4 text-4xl font-bold text-center font-brush text-neutral-200">
-            <span className="relative z-10">Our Menu</span>
+            <span className="relative z-10">Featured</span>
           </h2>
           <div className="flex items-center justify-center w-full">
             <svg
@@ -86,7 +87,7 @@ export default function Products() {
             })}
           </section>
         </div>
-      </div>
+      </ScrollAnimated>
     </section>
   );
 }

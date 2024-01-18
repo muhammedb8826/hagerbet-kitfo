@@ -3,6 +3,7 @@ import React from "react";
 export default function DividerSharp() {
   return (
     <svg
+      className="bg-light-ivory"
       viewBox="0 0 1000 100"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"

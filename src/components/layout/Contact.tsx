@@ -1,11 +1,12 @@
 import React from "react";
 import SocialLink from "../ui/SocialLink";
 import Link from "next/link";
+import ScrollAnimated from "./ScrollAnimated";
 
 export default function Contact() {
   return (
     <section id="Contact" className="bg-neutral-900 py-section">
-      <div className="container container--sm">
+      <ScrollAnimated className="container container--sm">
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
             <h2 className="text-2xl font-semibold capitalize font-brush text-neutral-100 lg:text-3xl">
@@ -118,7 +119,7 @@ export default function Contact() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </ScrollAnimated>
     </section>
   );
 }

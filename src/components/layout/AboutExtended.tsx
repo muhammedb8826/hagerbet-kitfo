@@ -22,10 +22,10 @@ export default function AboutExtended() {
             />
 
             <div className="p-16 bg-white rounded-custom--lg">
-              <h2 className="mb-4 text-2xl text-neutral-900">
-                About us
+              <h2 className="mb-4 text-3xl font-brush text-neutral-900">
+                Our
                 <br />
-                We are the best!
+                History
               </h2>
               <div className="space-y-4 text-neutral-600 ">
                 <p>
@@ -45,10 +45,8 @@ export default function AboutExtended() {
             </div>
 
             <div className="p-16 bg-white rounded-custom--lg">
-              <h2 className="mb-4 text-2xl text-neutral-900">
+              <h2 className="mb-4 text-3xl font-brush text-neutral-900">
                 About us
-                <br />
-                We are the best!
               </h2>
               <div className="space-y-4 text-neutral-600">
                 <p>

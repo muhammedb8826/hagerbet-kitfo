@@ -6,7 +6,7 @@ import ProductsFeatured from "@/components/layout/menu/ProductsFeatured";
 
 export default function MenuPage() {
   return (
-    <PageWrapper className="bg-light-ivory">
+    <PageWrapper className="bg-neutral-900">
       <ProductsFeatured pb="xl" />
       <Menu pt="xl" pb="xl" />
       <Footer />

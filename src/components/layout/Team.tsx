@@ -57,11 +57,11 @@ const teamMembers: (TeamMember | undefined)[] = [
 
 export default function Team() {
   return (
-    <section id="Team" className="relative bg-light-ivory py-section">
+    <section id="Team" className="relative bg-neutral-900 py-section">
       <div id="staff" className="absolute -top-20"></div>
       <div className="container">
         <div>
-          <h2 className="mb-8 text-2xl font-semibold text-center capitalize lg:mb-12 text-neutral-900 lg:text-3xl">
+          <h2 className="mb-8 text-2xl font-brush font-semibold text-center capitalize lg:mb-12 text-neutral-200 lg:text-3xl">
             Our Team
           </h2>
           <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -78,10 +78,10 @@ export default function Team() {
                   alt={name}
                 />
                 <div className="mt-2">
-                  <h3 className="text-lg font-medium text-neutral-900">
+                  <h3 className="text-lg font-medium text-neutral-100">
                     {name}
                   </h3>
-                  <span className="mt-1 text-neutral-500">{role}</span>
+                  <span className="mt-1 text-neutral-400">{role}</span>
                 </div>
               </section>
             ))}

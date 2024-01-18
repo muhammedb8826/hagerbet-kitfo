@@ -7,6 +7,7 @@ import LogoSVG from "../svg/LogoSVG";
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
 import SocialLink from "../ui/SocialLink";
+import Animated from "./Animated";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -51,28 +52,46 @@ export default function Hero() {
       <div className="container z-10 w-full h-full mx-auto">
         <div className="grid w-full h-full grid-cols-2 mx-auto">
           <div className="z-10 flex flex-col self-center max-w-xl ">
-            <LogoSVG width={150} height={150} />
-            <h1 className="mb-4 text-5xl font-semibold font-brush text-neutral-200">
+            <Animated type="spring" delay={1.0} duration={0.8} variant="top-sm">
+              <LogoSVG width={150} height={150} />
+            </Animated>
+            <Animated
+              as="h1"
+              delay={0.4}
+              variant="right"
+              className="mb-4 text-5xl font-semibold font-brush text-neutral-200"
+            >
               Lorem ipsum dolor
               <br />
               <span className="text-primary-500">Sit amet</span>
-            </h1>
+            </Animated>
 
-            <p>
+            <Animated as="p" delay={0.6} variant="right">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus, excepturi hic delectus sint officiis sunt.
-            </p>
-            <div className="flex flex-row gap-8 mt-8">
+            </Animated>
+            <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
               <Link href="/menu#menu">
                 <Button variant="primary">Explore menu</Button>
               </Link>
               {/* <Button variant="outlined">Secondary</Button> */}
-            </div>
+            </Animated>
             <div className="absolute flex flex-row items-center gap-8 left-20 bottom-20">
-              <SocialLink variant="facebook" url="https://facebook.com/" />
-              <SocialLink variant="instagram" url="https://instagram.com/" />
-              <SocialLink variant="twitter" url="https://twitter.com/" />
-              <div className="w-80 h-[1px] bg-neutral-500"></div>
+              <Animated type="spring" delay={1.2} duration={0.5} variant="top-sm">
+                <SocialLink variant="facebook" url="https://facebook.com/" />
+              </Animated>
+              <Animated type="spring" delay={1.35} duration={0.5} variant="top-sm">
+                <SocialLink variant="instagram" url="https://instagram.com/" />
+              </Animated>
+              <Animated type="spring" delay={1.5} duration={0.5} variant="top-sm">
+                <SocialLink variant="twitter" url="https://twitter.com/" />
+              </Animated>
+
+              <Animated
+                variant="left"
+                delay={1.4}
+                className="w-80 h-[1px] bg-neutral-500"
+              ></Animated>
             </div>
           </div>
         </div>

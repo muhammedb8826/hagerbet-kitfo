@@ -6,6 +6,7 @@ import Image6 from "@/public/bento/bento-6.jpg";
 import RamenSVG from "@/public/bento/ramen.svg";
 import clsx from "clsx";
 import { paddingBot, paddingTop } from "@/utils/props";
+import ScrollAnimated from "./ScrollAnimated";
 
 type Props = {
   pb?: "md" | "xl";
@@ -18,7 +19,7 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
       id="Categories"
       className={clsx("bg-neutral-100", paddingTop[pt], paddingBot[pb])}
     >
-      <div className="container container--sm">
+      <ScrollAnimated className="container container--sm">
         <div className="grid gap-6 bento">
           <div className="col-span-1 row-span-1 text-neutral-600 bg-primary-500">
             <Image
@@ -77,7 +78,7 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
             />
           </div>
         </div>
-      </div>
+      </ScrollAnimated>
     </section>
   );
 }
