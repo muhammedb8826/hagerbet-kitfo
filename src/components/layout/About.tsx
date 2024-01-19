@@ -30,7 +30,7 @@ export default function About() {
                 decade. We started out with a love for true Japanese flavors and
                 a wish to bring them to everyone. Our chefs, known for their
                 careful craft and commitment, put together dishes that truly
-                reflect the heart of Japan's cooking traditions.
+                reflect the heart of Japan&apos;s cooking traditions.
               </p>
               <div className="flex flex-row gap-4 mt-6">
                 <Link href="/about">

@@ -1,9 +1,5 @@
 import Image from "next/image";
-import Image1 from "@/public/bento/bento-1.jpg";
 import Image2 from "@/public/bento/bento-2.jpg";
-import Image3 from "@/public/bento/bento-3.jpg";
-import Image4 from "@/public/bento/bento-4.jpg";
-import Image5 from "@/public/bento/bento-5.jpg";
 import Image6 from "@/public/bento/bento-6.jpg";
 
 export default function AboutExtended() {
@@ -54,15 +50,15 @@ export default function AboutExtended() {
                 <p>
                   Our chefs, masters of their craft, meticulously blend
                   traditional techniques with modern flair to bring you a menu
-                  that's both authentic and innovative. From the vibrant colors
+                  that&apos;s both authentic and innovative. From the vibrant colors
                   of our sushi to the aromatic broths of our ramen, each
                   ingredient is handpicked, each recipe is time-honored, and
                   each meal is a testament to the spirit of Japanese cuisine.
                 </p>
                 <p>
                   We invite you to step into our world, to explore the richness
-                  of Japanese culture, and to savor a culinary adventure that's
-                  been a decade in the making. Welcome to [Restaurant Name],
+                  of Japanese culture, and to savor a culinary adventure that&apos;s
+                  been a decade in the making. Welcome to Asian Food,
                   where every meal is a journey, and every journey is a story
                   waiting to be told.
                 </p>
