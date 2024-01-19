@@ -1,11 +1,16 @@
-import Image from "next/image";
+"use client";
 import React from "react";
-import TabsProduct from "../../modules/Product/TabsProduct";
 import Product from "../../modules/Product/Product";
-import BrushSVG from "../../svg/BrushSVG";
 import Ramen1 from "@/public/products/ramen/ramen-shoyu.avif";
 import Ramen2 from "@/public/products/ramen/ramen-miso.avif";
 import ScrollAnimated from "../ScrollAnimated";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/navigation";
+import { paddingBot, paddingTop } from "@/utils/props";
+import clsx from "clsx";
 
 const products = [
   {
@@ -44,9 +49,17 @@ const products = [
   },
 ];
 
-export default function Products() {
+type Props = {
+  pb?: "md" | "xl";
+  pt?: "md" | "xl";
+};
+
+export default function Products({ pb = "md", pt = "md" }: Props) {
   return (
-    <section id="Products" className="bg-neutral-900 py-section">
+    <section
+      id="Products"
+      className={clsx("bg-neutral-900 featured-section", paddingTop[pt], paddingBot[pb])}
+    >
       <ScrollAnimated className="container container--sm">
         <div className="mx-auto">
           <h2 className="relative mb-4 text-4xl font-bold text-center font-brush text-neutral-200">
@@ -74,17 +87,25 @@ export default function Products() {
           </div>
 
           <section className="mt-8 space-y-8 lg:mt-12">
-            {products.map(({ id, price, imgScr, title, description }) => {
-              return (
-                <Product
-                  key={id}
-                  price={price}
-                  imgSrc={imgScr}
-                  title={title}
-                  description={description}
-                />
-              );
-            })}
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              navigation={true}
+              modules={[Navigation]}
+            >
+              {products.map(({ id, price, imgScr, title, description }) => {
+                return (
+                  <SwiperSlide key={id}>
+                    <Product
+                      price={price}
+                      imgSrc={imgScr}
+                      title={title}
+                      description={description}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </section>
         </div>
       </ScrollAnimated>

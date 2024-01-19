@@ -9,7 +9,7 @@ body {
 }
 
 .font-brush {
-    font-family: $font-family-serif;
+  font-family: $font-family-serif;
 }
 
 p {
@@ -38,4 +38,27 @@ a {
 .bento {
   grid-template-columns: 1fr 1fr 1.5fr;
   grid-template-rows: 0.8fr 0.5fr;
+}
+
+.featured-section,
+.team-section {
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply p-4 h-10 w-10 bottom-0 top-auto rounded-xl border border-transparent text-neutral-200 flex flex-row items-center justify-center gap-2;
+    background: transparent;
+    transition: 0.25s ease all;
+    &:after {
+      @apply text-neutral-200 text-xl;
+    }
+    &:hover {
+      @apply bg-neutral-900;
+      background: theme("colors.neutral.800") !important;
+    }
+  }
+  .swiper-button-next {
+    left: 4rem;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
 }
