@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
+import useMenuTabsStore from "../../../stores/useMenuTabsStore";
 
 type Props = {
   imgSrc: StaticImageData;
@@ -11,7 +12,7 @@ type Props = {
   width: number;
   height: number;
   span?: number;
-  href: string;
+  tabId: number;
 };
 
 export default function CategoryTile({
@@ -20,16 +21,19 @@ export default function CategoryTile({
   width = 384,
   height = 256,
   span = 1,
-  href,
+  tabId,
 }: Props) {
+  const { setTab } = useMenuTabsStore();
+
   return (
-    <div
+    <button
+      onClick={() => setTab(tabId)}
       className={clsx(
         "overflow-hidden group relative w-full h-full group",
         span === 2 && "row-span-2"
       )}
     >
-      <Link href={href}>
+      <Link href={"/menu#menu"}>
         <span className="absolute top-0 left-0 z-10 w-full h-full transition duration-500 opacity-0 bg-gradient-to-r from-black group-hover:opacity-50"></span>
       </Link>
       <span className="absolute z-10 flex items-center gap-1 transition duration-300 translate-y-24 bottom-14 ease group-hover:translate-y-0 left-8">
@@ -37,7 +41,7 @@ export default function CategoryTile({
       </span>
       <span className="absolute z-10 flex items-center gap-1 transition duration-300 delay-75 translate-y-14 bottom-6 ease group-hover:translate-y-0 left-8">
         <Link
-          href={href}
+          href={"/menu#menu"}
           className="z-30 flex flex-row items-center gap-1 text-xl hover:underline"
         >
           Discover{" "}
@@ -66,6 +70,6 @@ export default function CategoryTile({
         loading="lazy"
         alt={title}
       />
-    </div>
+    </button>
   );
 }

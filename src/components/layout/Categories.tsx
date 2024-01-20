@@ -13,6 +13,7 @@ import ScrollAnimated from "./ScrollAnimated";
 import { motion } from "framer-motion";
 import CategoryTile from "../ui/CategoryTile";
 import Link from "next/link";
+import useMenuTabsStore from "../../../stores/useMenuTabsStore";
 
 type Props = {
   pb?: "md" | "xl";
@@ -20,18 +21,7 @@ type Props = {
 };
 
 export default function Categories({ pb = "md", pt = "md" }: Props) {
-  const notesMotion = {
-    rest: { opacity: 0, ease: "linear", duration: 0.15, type: "tween", y: 20 },
-    hover: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.15,
-        type: "tween",
-        ease: "linear",
-      },
-    },
-  };
+  const { setTab } = useMenuTabsStore();
 
   return (
     <section
@@ -41,14 +31,14 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
       <ScrollAnimated className="container container--sm">
         <div className="grid gap-6 bento">
           <CategoryTile
-            href="/menu"
+            tabId={1}
             title={"Ramen"}
             imgSrc={Image1}
             width={384}
             height={384}
           />
           <CategoryTile
-            href="/menu"
+            tabId={3}
             span={2}
             title={"Onigiri"}
             imgSrc={OnigiriImg}
@@ -56,14 +46,14 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
             height={682}
           />
           <CategoryTile
-            href="/menu"
+            tabId={0}
             title={"Sushi"}
             imgSrc={Image6}
             width={384}
             height={256}
           />
           <CategoryTile
-            href="/menu"
+            tabId={2}
             title={"Mochi"}
             imgSrc={MochiImg}
             width={384}
@@ -71,17 +61,17 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
           />
           <div className="relative w-full h-full bg-primary-500 text-neutral-100">
             <div className="flex flex-col justify-center h-full gap-2 px-16 text-2xl font-medium">
-              <Link href={"/menu"} className="hover:underline w-fit">
-                <p>Sushi</p>
+              <Link href={"/menu#menu"} className="hover:underline w-fit">
+                <span onClick={() => setTab(0)}>Sushi</span>
               </Link>
-              <Link href={"/menu"} className="hover:underline w-fit">
-                <p>Ramen</p>
+              <Link href={"/menu#menu"} className="hover:underline w-fit">
+                <span onClick={() => setTab(1)}>Ramen</span>
               </Link>
-              <Link href={"/menu"} className="hover:underline w-fit">
-                <p>Mochi</p>
+              <Link href={"/menu#menu"} className="hover:underline w-fit">
+                <span onClick={() => setTab(2)}>Mochi</span>
               </Link>
-              <Link href={"/menu"} className="hover:underline w-fit">
-                <p>Onigiri</p>
+              <Link href={"/menu#menu"} className="hover:underline w-fit">
+                <span onClick={() => setTab(3)}>Onigiri</span>
               </Link>
             </div>
             <Image

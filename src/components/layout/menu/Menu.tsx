@@ -3,7 +3,8 @@ import TabsProduct from "@/components/modules/Product/TabsProduct";
 import MenuItem from "@/components/ui/MenuItem";
 import { paddingBot, paddingTop } from "@/utils/props";
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import useMenuTabsStore from "../../../../stores/useMenuTabsStore";
 
 const menu = {
   sushi: [
@@ -111,7 +112,8 @@ type Props = {
 };
 
 export default function Menu({ pb = "md", pt = "md" }: Props) {
-  const [tab, setTab] = useState(0);
+  const { tab, setTab } = useMenuTabsStore();
+
   return (
     <section
       id="Menu"

@@ -26,7 +26,8 @@
     "sass": "^1.69.7",
     "shortid": "^2.2.16",
     "swiper": "^11.0.5",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
