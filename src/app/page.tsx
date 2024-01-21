@@ -23,7 +23,7 @@ import PageWrapper from "@/components/layout/PageWrapper";
 
 export default function Home() {
   return (
-    <PageWrapper>
+    <PageWrapper className="overflow-x-hidden">
       <Hero />
       {/* <div className="relative w-full h-24 -mt-20 rounded-tl-full rounded-tr-full bg-light-ivory"></div> */}
       <Categories pt="xl" />

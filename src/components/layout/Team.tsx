@@ -61,7 +61,6 @@ export default function Team() {
           <h2 className="mb-8 text-center text-neutral-200 heading-second">
             Our Team
           </h2>
-          {/* <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> */}
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
@@ -89,7 +88,7 @@ export default function Team() {
               {teamMembers.map(({ id, name, imageUrl, role }: any) => (
                 <SwiperSlide key={id}>
                   <section
-                    className="flex items-center justify-center w-full max-w-full gap-10 text-center sm:gap-2 sm:flex-col lg:max-w-xs aspect-square"
+                    className="flex flex-col items-center justify-center w-full max-w-full gap-2 text-center lg:max-w-xs aspect-square"
                   >
                     <Image
                       width={320}
