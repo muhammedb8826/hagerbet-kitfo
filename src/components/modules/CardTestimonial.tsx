@@ -9,7 +9,7 @@ type Props = {
 
 export default function CardTestimonial({ content, name, avatarUrl }: Props) {
   return (
-    <div className="p-8 mx-auto text-center bg-white shadow-sm rounded-custom lg:px-6 ">
+    <div className="p-8 mx-auto text-center bg-white shadow-sm max-w-[500px] rounded-custom lg:px-6 ">
       <figure className="flex flex-col justify-between h-full max-w-screen-md mx-auto">
         <div>
           <svg

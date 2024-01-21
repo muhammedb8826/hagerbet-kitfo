@@ -7,7 +7,7 @@ export default function AboutExtended() {
     <>
       <section id="AboutExtended" className="bg-light-ivory py-section">
         <div className="container container--xs">
-          <div className="grid gap-4 lg:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <Image
               className="self-end w-full h-fit justify-self-end rounded-custom--lg"
               width={384}
@@ -17,8 +17,8 @@ export default function AboutExtended() {
               alt=""
             />
 
-            <div className="p-16 bg-white rounded-custom--lg">
-              <h2 className="mb-4 text-3xl font-brush text-neutral-900">
+            <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
+              <h2 className="mb-4 heading-second text-neutral-900">
                 Our
                 <br />
                 History
@@ -42,8 +42,8 @@ export default function AboutExtended() {
               </div>
             </div>
 
-            <div className="p-16 bg-white rounded-custom--lg">
-              <h2 className="mb-4 text-3xl font-brush text-neutral-900">
+            <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
+              <h2 className="mb-4 heading-second text-neutral-900">
                 About us
               </h2>
               <div className="space-y-4 text-neutral-600">

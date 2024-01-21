@@ -4,7 +4,7 @@ import MenuItem from "@/components/ui/MenuItem";
 import { paddingBot, paddingTop } from "@/utils/props";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import useMenuTabsStore from "../../../../stores/useMenuTabsStore";
+import useMenuTabsStore from "../../../stores/useMenuTabsStore";
 
 const menu = {
   sushi: [

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
-import useMenuTabsStore from "../../../stores/useMenuTabsStore";
+import useMenuTabsStore from "../../stores/useMenuTabsStore";
 
 type Props = {
   imgSrc: StaticImageData;
@@ -36,13 +36,13 @@ export default function CategoryTile({
       <Link href={"/menu#menu"}>
         <span className="absolute top-0 left-0 z-10 w-full h-full transition duration-500 opacity-0 bg-gradient-to-r from-black group-hover:opacity-50"></span>
       </Link>
-      <span className="absolute z-10 flex items-center gap-1 transition duration-300 translate-y-24 bottom-14 ease group-hover:translate-y-0 left-8">
-        <span className="z-30 text-4xl">{title}</span>
+      <span className="absolute z-10 flex items-center gap-1 transition duration-300 translate-y-24 bottom-10 md:bottom-14 ease group-hover:translate-y-0 left-4 md:left-8">
+        <span className="z-30 text-xl md:text-4xl">{title}</span>
       </span>
-      <span className="absolute z-10 flex items-center gap-1 transition duration-300 delay-75 translate-y-14 bottom-6 ease group-hover:translate-y-0 left-8">
+      <span className="absolute z-10 flex items-center gap-1 transition duration-300 delay-75 translate-y-14 bottom-4 md:bottom-6 ease group-hover:translate-y-0 left-4 md:left-8">
         <Link
           href={"/menu#menu"}
-          className="z-30 flex flex-row items-center gap-1 text-xl hover:underline"
+          className="z-30 flex flex-row items-center gap-1 text-base md:text-xl hover:underline"
         >
           Discover{" "}
           <svg

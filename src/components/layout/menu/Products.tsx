@@ -62,7 +62,7 @@ export default function Products({ pb = "md", pt = "md" }: Props) {
     >
       <ScrollAnimated className="container container--sm">
         <div className="mx-auto">
-          <h2 className="relative mb-4 text-4xl font-bold text-center font-brush text-neutral-200">
+          <h2 className="relative mb-4 text-center heading-second text-neutral-200">
             <span className="relative z-10">Featured</span>
           </h2>
           <div className="flex items-center justify-center w-full">

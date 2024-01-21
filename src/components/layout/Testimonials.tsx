@@ -36,7 +36,7 @@ export const Testimonials = () => {
         <h2 className="mb-8 text-2xl font-semibold text-center capitalize font-brush lg:mb-12 text-neutral-800 lg:text-3xl">
           Testimonials
         </h2>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {testimonials.map(({ id, content, name, avatarUrl }) => {
             return (
               <CardTestimonial

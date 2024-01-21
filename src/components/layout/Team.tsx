@@ -58,21 +58,38 @@ export default function Team() {
       <div id="staff" className="absolute -top-20"></div>
       <div className="container">
         <div>
-          <h2 className="mb-8 text-2xl font-semibold text-center capitalize font-brush lg:mb-12 text-neutral-200 lg:text-3xl">
+          <h2 className="mb-8 text-center text-neutral-200 heading-second">
             Our Team
           </h2>
           {/* <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> */}
             <Swiper
-              slidesPerView={4}
+              slidesPerView={1}
               spaceBetween={30}
               navigation={true}
               modules={[Navigation]}
               className="!pb-16"
+              breakpoints={{
+                319: {
+                  slidesPerView: 1,
+                },
+                639: {
+                  slidesPerView: 2,
+                },
+                767: {
+                  slidesPerView: 3,
+                },
+                1023: {
+                  slidesPerView: 3,
+                },
+                1535: {
+                  slidesPerView: 4,
+                },
+              }}
             >
               {teamMembers.map(({ id, name, imageUrl, role }: any) => (
                 <SwiperSlide key={id}>
                   <section
-                    className="w-full max-w-xs text-center aspect-square"
+                    className="flex items-center justify-center w-full max-w-full gap-10 text-center sm:gap-2 sm:flex-col lg:max-w-xs aspect-square"
                   >
                     <Image
                       width={320}
@@ -81,7 +98,7 @@ export default function Team() {
                       src={imageUrl}
                       alt={name}
                     />
-                    <div className="mt-2">
+                    <div className="w-2/6 mt-2 sm:w-full">
                       <h3 className="text-lg font-medium text-neutral-100">
                         {name}
                       </h3>

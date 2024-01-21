@@ -13,7 +13,8 @@ import ScrollAnimated from "./ScrollAnimated";
 import { motion } from "framer-motion";
 import CategoryTile from "../ui/CategoryTile";
 import Link from "next/link";
-import useMenuTabsStore from "../../../stores/useMenuTabsStore";
+import useMenuTabsStore from "../../stores/useMenuTabsStore";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 type Props = {
   pb?: "md" | "xl";
@@ -22,14 +23,15 @@ type Props = {
 
 export default function Categories({ pb = "md", pt = "md" }: Props) {
   const { setTab } = useMenuTabsStore();
+  const isMobile = useMediaQuery(`(max-width: 1280px)`);
 
   return (
     <section
       id="Categories"
       className={clsx("bg-neutral-100", paddingTop[pt], paddingBot[pb])}
     >
-      <ScrollAnimated className="container container--sm">
-        <div className="grid gap-6 bento">
+      <ScrollAnimated className={clsx(!isMobile && "container container--sm")}>
+        <div className="grid gap-2 sm:gap-6 md:gap-2 lg:gap-6 bento">
           <CategoryTile
             tabId={1}
             title={"Ramen"}
@@ -60,7 +62,7 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
             height={256}
           />
           <div className="relative w-full h-full bg-primary-500 text-neutral-100">
-            <div className="flex flex-col justify-center h-full gap-2 px-16 text-2xl font-medium">
+            <div className="flex flex-col justify-center h-full mx-auto text-base font-medium sm:text-lg w-fit sm:mx-0 sm:px-4 lg:px-8 xl:px-16 sm:gap-2 md:gap-0 xl:gap-2 xl:text-2xl">
               <Link href={"/menu#menu"} className="hover:underline w-fit">
                 <span onClick={() => setTab(0)}>Sushi</span>
               </Link>
@@ -75,7 +77,7 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
               </Link>
             </div>
             <Image
-              className="w-[250px] h-[250px] absolute right-12 bottom-0"
+              className="hidden sm:block w-3/4 h-3/4 lg:w-[180px] lg:h-[180px] xl:w-[250px] lg:h-[250px] absolute right-2 bottom-0 md:right-12 md:bottom-0"
               width={250}
               height={250}
               src={RamenSVG}

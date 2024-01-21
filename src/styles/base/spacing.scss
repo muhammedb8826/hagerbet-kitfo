@@ -31,28 +31,51 @@
 //   }
 
 $section-padding: 4rem;
+$section-padding-sm: 2rem;
 
 .py-section {
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
+  padding-top: $section-padding-sm;
+  padding-bottom: $section-padding-sm;
+  @include sm {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
 }
 .pt-section {
-  padding-top: $section-padding;
+  padding-top: $section-padding-sm;
+  @include sm {
+    padding-top: $section-padding;
+  }
 }
 .pb-section {
-  padding-bottom: $section-padding;
+  padding-bottom: $section-padding-sm;
+  @include sm {
+    padding-top: $section-padding;
+  }
 }
 .py-section-xl {
-  padding-top: calc($section-padding * 2);
-  padding-bottom: calc($section-padding * 2);
+  padding-top: calc($section-padding-sm * 2);
+  padding-bottom: calc($section-padding-sm * 2);
+  @include sm {
+    padding-top: calc($section-padding * 2);
+    padding-bottom: calc($section-padding * 2);
+  }
 }
 .pt-section-xl {
-  padding-top: calc($section-padding * 2);
+  padding-top: calc($section-padding-sm * 2);
+  @include sm {
+    padding-top: calc($section-padding * 2);
+  }
 }
 .pb-section-xl {
-  padding-bottom: calc($section-padding * 2);
+  padding-bottom: calc($section-padding-sm * 2);
+  @include sm {
+    padding-bottom: calc($section-padding * 2);
+  }
 }
-.mt
-.mt-section {
-  margin-top: $section-padding;
+.mt .mt-section {
+  margin-top: $section-padding-sm;
+  @include sm {
+    margin-top: $section-padding;
+  }
 }

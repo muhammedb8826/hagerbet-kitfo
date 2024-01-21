@@ -10,12 +10,12 @@ export default function About() {
     <>
       <section id="About" className="bg-light-ivory py-section">
         <ScrollAnimated variant="left" className="container container--sm">
-          <div className="items-center gap-16 lg:grid lg:grid-cols-2">
+          <div className="flex flex-col items-center gap-16 md:grid md:grid-cols-2">
             <ScrollAnimated
               variant="right"
               className="font-light text-neutral-800 sm:text-lg"
             >
-              <h2 className="relative mb-4 text-4xl font-bold font-brush text-neutral-900">
+              <h2 className="relative mb-4 heading-second text-neutral-900">
                 <span className="relative z-10">About us</span>
                 {/* <span className="absolute -left-2 -bottom-4 z-1">
                   <BrushSVG width={200} height={50} />

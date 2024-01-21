@@ -8,10 +8,13 @@ import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
 import SocialLink from "../ui/SocialLink";
 import Animated from "./Animated";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import clsx from "clsx";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
   const animationControls = useAnimation();
+  const isMobile = useMediaQuery(`(max-width: 768px)`);
 
   useEffect(() => {
     if (loaded) {
@@ -32,45 +35,71 @@ export default function Hero() {
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))`,
       }}
     >
-      <div className="absolute top-0 left-0 z-10 w-full h-full bg-gradient-to-r from-neutral-900"></div>
+      <div
+        className={clsx(
+          "absolute top-0 left-0 z-10 w-full h-full",
+          isMobile
+            ? "bg-gradient-to-r from-neutral-900 to-neutral-900/40"
+            : "bg-gradient-to-r from-neutral-900"
+        )}
+      ></div>
       <motion.div
         initial={"hidden"}
         animate={animationControls}
         variants={animationVariants}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        <Image
-          className="absolute top-0 left-0 object-cover w-full transition z-1"
-          src={bg}
-          fill
-          onLoad={() => setLoaded(true)}
-          priority
-          placeholder="blur"
-          alt="Lorem ipsum dolor"
-        />
+        {(!isMobile || isMobile === undefined) && (
+          <Image
+            className="absolute top-0 left-0 object-cover w-full transition z-1"
+            src={bg}
+            fill
+            onLoad={() => setLoaded(true)}
+            priority
+            placeholder="blur"
+            alt="Lorem ipsum dolor"
+          />
+        )}
+        {(isMobile || isMobile === undefined) && (
+          <Image
+            className="absolute top-0 left-0 object-cover object-left w-full transition z-1"
+            src={
+              "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+            fill
+            onLoad={() => setLoaded(true)}
+            priority
+            alt="Lorem ipsum dolor"
+          />
+        )}
       </motion.div>
       <div className="container z-10 w-full h-full mx-auto">
-        <div className="grid w-full h-full grid-cols-2 mx-auto">
-          <div className="z-10 flex flex-col self-center justify-between h-full max-w-xl py-8">
+        <div className="grid w-full h-full max-w-full mx-auto md:grid-cols-2">
+          <div className="z-10 flex flex-col self-center justify-between h-full max-w-xs py-8 sm:max-w-sm md:max-w-xl">
             <div></div>
             <div>
-              <Animated type="spring" delay={1.0} duration={0.8} variant="top-sm">
+              <Animated
+                type="spring"
+                delay={1.0}
+                duration={0.8}
+                variant={"top-sm"}
+              >
                 <LogoSVG width={150} height={150} />
               </Animated>
               <Animated
                 as="h1"
                 delay={0.4}
-                variant="right"
-                className="mb-4 text-5xl font-semibold font-brush text-neutral-200"
+                variant={"top-sm"}
+                className="mb-4 heading-first text-neutral-200"
               >
                 Savor the Art
                 <br />
                 <span className="text-primary-500">of Japanese Cuisine</span>
               </Animated>
-              <Animated as="p" delay={0.6} variant="right">
+              <Animated as="p" delay={0.6} variant="top-sm">
                 Embark on a culinary journey through the heart of Japan with our
-                authentic sushi and ramen dishes. Each bite is a testament to the
-                mastery of traditional techniques and the purity of fresh,
+                authentic sushi and ramen dishes. Each bite is a testament to
+                the mastery of traditional techniques and the purity of fresh,
                 locally-sourced ingredients.
               </Animated>
               <Animated delay={0.9} className="flex flex-row gap-8 mt-8">

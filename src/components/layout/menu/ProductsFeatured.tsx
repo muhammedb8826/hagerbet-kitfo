@@ -59,7 +59,7 @@ export default function ProductsFeatured({ pb = "md", pt = "md" }: Props) {
     >
       <div className="container container--sm">
         <div className="mx-auto">
-          <h1 className="relative mb-4 text-4xl font-bold text-center font-brush text-neutral-200">
+          <h1 className="relative mb-4 heading-second text-neutral-200">
             <span className="relative z-10">Featured</span>
           </h1>
           <ZigzagSVG />

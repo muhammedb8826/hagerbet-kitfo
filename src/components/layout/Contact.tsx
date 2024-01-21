@@ -1,24 +1,28 @@
+"use client";
 import React from "react";
 import SocialLink from "../ui/SocialLink";
 import Link from "next/link";
 import ScrollAnimated from "./ScrollAnimated";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Contact() {
+  const isMobile = useMediaQuery(`(max-width: 768px)`);
+
   return (
     <section id="Contact" className="bg-neutral-900 py-section">
       <ScrollAnimated className="container container--sm">
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
-            <h2 className="text-2xl font-semibold capitalize font-brush text-neutral-100 lg:text-3xl">
+            <h2 className="text-center lg:text-left text-neutral-100 heading-second">
               <span className="text-primary-500">Contact us</span> <br /> for
               more info
             </h2>
 
-            <address className="mt-6 space-y-8 md:mt-8">
-              <div className="flex items-start -mx-2">
+            <address className="flex flex-col items-center mt-6 space-y-8 lg:items-start lg:items-left lg:mt-8">
+              <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary-500"
+                  className="hidden w-6 h-6 lg:block text-primary-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -36,23 +40,23 @@ export default function Contact() {
                   />
                 </svg>
 
-                <div className="flex flex-col gap-2">
-                  <span className="mx-2 truncate w-72 text-neutral-400">
+                <div className="flex flex-col gap-2 text-center lg:text-left">
+                  <span className="truncate w-72 text-neutral-400">
                     1234 Ipsum Street
                   </span>
-                  <span className="mx-2 truncate w-72 text-neutral-400">
+                  <span className="truncate w-72 text-neutral-400">
                     Loremville, Ipsumia 56789
                   </span>
-                  <span className="mx-2 truncate w-72 text-neutral-400">
+                  <span className="truncate w-72 text-neutral-400">
                     Consectetur Adipiscing Elite.
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-start -mx-2">
+              <div className="flex items-center justify-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary-500 "
+                  className="w-5 h-5 text-primary-500 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -65,17 +69,17 @@ export default function Contact() {
                   />
                 </svg>
                 <Link
-                  className="mx-2 truncate w-72 text-neutral-400"
+                  className="truncate text-neutral-400"
                   href={"tel:1234567890"}
                 >
                   (123) 456-7890
                 </Link>
               </div>
 
-              <div className="flex items-start -mx-2">
+              <div className="flex items-center justify-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary-500 "
+                  className="w-5 h-5 text-primary-500 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -89,7 +93,7 @@ export default function Contact() {
                 </svg>
 
                 <Link
-                  className="mx-2 truncate w-72 text-neutral-400"
+                  className="truncate w-fit text-neutral-400"
                   href={"mailto:contact@loremipsum.com"}
                 >
                   contact@loremipsum.com
@@ -97,9 +101,11 @@ export default function Contact() {
               </div>
             </address>
 
-            <section className="mt-6 w-80 md:mt-8">
-              <h3 className="text-neutral-300 text-left mb-2">Follow us</h3>
-              <div className="flex gap-2 items-center justify-start">
+            <section className="mt-6 ">
+              <p className="mb-2 text-center lg:text-left text-neutral-300">
+                Follow us
+              </p>
+              <div className="flex items-center justify-center gap-2 lg:justify-start">
                 <SocialLink variant="facebook" url="https://facebook.com/" />
                 <SocialLink variant="instagram" url="https://instagram.com/" />
                 <SocialLink variant="twitter" url="https://twitter.com/" />
@@ -107,17 +113,20 @@ export default function Contact() {
             </section>
           </div>
 
-          <div className="mt-8 lg:w-1/2 lg:mx-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5990.566373508373!2d14.543439619481877!3d53.42631447644446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093800d3a759%3A0xa95adc4e5f8ac4f3!2sSzczecin!5e0!3m2!1spl!2spl!4v1705360290393!5m2!1spl!2spl"
-              width="800"
-              height="600"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          {!isMobile && (
+            <div className="mt-8 lg:w-1/2 lg:mx-6">
+              <iframe
+                className="w-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5990.566373508373!2d14.543439619481877!3d53.42631447644446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093800d3a759%3A0xa95adc4e5f8ac4f3!2sSzczecin!5e0!3m2!1spl!2spl!4v1705360290393!5m2!1spl!2spl"
+                width="800"
+                height="600"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          )}
         </div>
       </ScrollAnimated>
     </section>

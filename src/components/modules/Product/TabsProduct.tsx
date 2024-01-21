@@ -15,7 +15,7 @@ const tabs = [
 
 export default function TabsProduct({ tab, setTab }: Props) {
   return (
-    <div className="flex gap-4 py-4 mt-4 overflow-x-auto overflow-y-hidden md:justify-center border-neutral-700">
+    <div className="flex flex-col gap-4 py-4 mt-4 overflow-x-auto overflow-y-hidden md:flex-row md:justify-center border-neutral-700">
       {tabs.map((item) => {
         return (
           <button
