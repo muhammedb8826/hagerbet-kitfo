@@ -60,8 +60,8 @@ export default function Header() {
               >
                 <LogoSVG width={50} height={50} />
                 <span className="flex gap-1">
-                  <span className="text-white font-brush">Asian</span>
-                  <span className="text-primary-500 font-brush">Food</span>
+                  <span className="text-white font-brush">Anwar</span>
+                  <span className="text-primary-500 font-brush">Hagerbet Kitfo</span>
                 </span>
               </Link>
               <Hamburger isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
