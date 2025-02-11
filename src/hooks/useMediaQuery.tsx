@@ -16,7 +16,7 @@ export function useMediaQuery(query: string): boolean | undefined {
     if (initialLoad) {
       setInitialLoad(false);
     }
-  }, []);
+  }, [initialLoad]);
 
   function handleChange() {
     setHasMatches(getMatches(query));

@@ -1,12 +1,9 @@
 "use client";
 
 import TabsProduct from "@/components/modules/Product/TabsProduct";
-import MenuItem from "@/components/ui/MenuItem";
 import OrderItem from "@/components/ui/OrderItem";
 import useMenuTabsStore from "@/stores/useMenuTabsStore";
 import { BACKEND_URL } from "@/utils/constants";
-import { paddingBot, paddingTop } from "@/utils/props";
-import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 interface Menu {
@@ -20,12 +17,7 @@ interface Menu {
   };
 }
 
-type Props = {
-  pb?: "md" | "xl";
-  pt?: "md" | "xl";
-};
-
-export default function Order({ pb = "md", pt = "md" }: Props) {
+export default function Order() {
   const [data, setData] = useState<Menu[]>([]);
   const { tab, setTab } = useMenuTabsStore();
 
@@ -48,11 +40,7 @@ export default function Order({ pb = "md", pt = "md" }: Props) {
   return (
     <section
       id="Menu"
-      className={clsx(
-        "bg-light-ivory relative",
-        paddingTop[pt],
-        paddingBot[pb]
-      )}
+      className="bg-light-ivory relative pt-16 pb-16"
     >
       <div id="menu" className="absolute -top-20"></div>
       <div className="container container--xs">

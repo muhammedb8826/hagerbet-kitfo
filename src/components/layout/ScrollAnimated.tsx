@@ -45,7 +45,7 @@ export default function ScrollAnimated({
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <motion.div
