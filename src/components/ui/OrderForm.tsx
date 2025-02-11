@@ -42,10 +42,6 @@ const [waiters, setWaiters] = useState<Waiters[]>([]);
        fetchData();
      }, []);
 
-     console.log(formData);
-     
-  
-
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     const { categoryId, menuItemId, waiters: waiterId } = formData;
