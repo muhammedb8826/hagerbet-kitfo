@@ -1,0 +1,1 @@
+export const BACKEND_URL = 'https://restaurant-rosy-rho.vercel.app';

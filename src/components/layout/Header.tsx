@@ -11,6 +11,7 @@ const links = [
   { id: 1, title: "Menu", path: "/menu" },
   { id: 2, title: "About", path: "/about" },
   { id: 3, title: "Contact", path: "/contact" },
+  { id: 4, title: "Order", path: "/order" },
 ];
 
 export default function Header() {

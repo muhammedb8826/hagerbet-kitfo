@@ -3,8 +3,9 @@ import TabsProduct from "@/components/modules/Product/TabsProduct";
 import MenuItem from "@/components/ui/MenuItem";
 import { paddingBot, paddingTop } from "@/utils/props";
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
 import useMenuTabsStore from "../../../stores/useMenuTabsStore";
+import { useEffect, useState } from "react";
+import { BACKEND_URL } from "@/utils/constants";
 
 const menu = {
   sushi: [
@@ -111,8 +112,36 @@ type Props = {
   pt?: "md" | "xl";
 };
 
+interface Menu {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  category: {
+    id: string;
+    name: string;
+  };
+}
+
 export default function Menu({ pb = "md", pt = "md" }: Props) {
+  const [data, setData] = useState<Menu[]>([]);
   const { tab, setTab } = useMenuTabsStore();
+
+   useEffect(() => {
+     const fetchData = async () => {
+       try {
+         const result = await fetch(`${BACKEND_URL}/menu`);
+         if (!result.ok) {
+           throw new Error('An error occurred while fetching the categories');
+         }
+         const data = await result.json();
+         setData(data);
+       } catch {
+         // toast.error('An error occurred while fetching the submissions');
+       }
+     };
+     fetchData();
+   }, []);
 
   return (
     <section
@@ -134,23 +163,23 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
         <TabsProduct tab={tab} setTab={setTab} />
 
         {tab == 0 &&
-          menu.sushi?.map(({ id, price, title, description }) => (
+          data?.filter((item) => item.category.name === 'Food').map((item) => (
             <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
+              key={item.id}
+              title={item.name}
+              description={item.description}
+              price={item.price}
             />
           ))}
         {tab == 1 &&
-          menu.ramen?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+             data?.filter((item) => item.category.name === 'Drinks').map((item) => (
+              <MenuItem
+                key={item.id}
+                title={item.name}
+                description={item.description}
+                price={item.price}
+              />
+            ))}
       </div>
     </section>
   );

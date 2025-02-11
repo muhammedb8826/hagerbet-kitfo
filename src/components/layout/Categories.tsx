@@ -64,16 +64,16 @@ export default function Categories({ pb = "md", pt = "md" }: Props) {
           <div className="relative w-full h-full bg-primary-500 text-neutral-100">
             <div className="flex flex-col justify-center h-full mx-auto text-base font-medium sm:text-lg w-fit sm:mx-0 sm:px-4 lg:px-8 xl:px-16 sm:gap-2 md:gap-0 xl:gap-2 xl:text-2xl">
               <Link href={"/menu#menu"} className="hover:underline w-fit">
-                <span onClick={() => setTab(0)}>Sushi</span>
+                <span onClick={() => setTab(0)}>Tibs</span>
               </Link>
               <Link href={"/menu#menu"} className="hover:underline w-fit">
-                <span onClick={() => setTab(1)}>Ramen</span>
+                <span onClick={() => setTab(1)}>Kitfo</span>
               </Link>
               <Link href={"/menu#menu"} className="hover:underline w-fit">
-                <span onClick={() => setTab(2)}>Mochi</span>
+                <span onClick={() => setTab(2)}>Hanid</span>
               </Link>
               <Link href={"/menu#menu"} className="hover:underline w-fit">
-                <span onClick={() => setTab(3)}>Onigiri</span>
+                <span onClick={() => setTab(3)}>Soft Drinks</span>
               </Link>
             </div>
             <Image

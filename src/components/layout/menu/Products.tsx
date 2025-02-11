@@ -16,35 +16,35 @@ const products = [
   {
     id: 1,
     price: 38,
-    category: "ramen",
+    category: "Food",
     imgScr: Ramen1,
-    title: "Shoyu Ramen",
+    title: "Kitfo",
     description: "Soy sauce-based broth, chicken, nori, menma, scallions",
   },
   {
     id: 2,
     price: 42,
-    category: "ramen",
+    category: "Food",
     imgScr: Ramen1,
-    title: "Tonkotsu  ramen",
+    title: "Hanid",
     description:
       "Rich pork broth, pork belly, soft-boiled egg, bamboo shoots, green onions",
   },
   {
     id: 3,
     price: 44,
-    category: "ramen",
+    category: "Food",
     imgScr: Ramen2,
-    title: "Miso Ramen",
+    title: "Tibs",
     description:
       "Miso-based broth, ground pork, corn, butter, bean sprouts, chives",
   },
   {
     id: 4,
     price: 48,
-    category: "ramen",
+    category: "Drinks",
     imgScr: Ramen2,
-    title: "Spicy Seafood Ramen",
+    title: "Soft Drink",
     description: "Spicy broth, mixed seafood, mushrooms, bok choy, red ginger",
   },
 ];

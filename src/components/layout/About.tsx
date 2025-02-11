@@ -26,8 +26,8 @@ export default function About() {
                 A Journey of Taste and Tradition.
               </p>
               <p className="text-base">
-                Asian Food has been a home for genuine Japanese cooking for a
-                decade. We started out with a love for true Japanese flavors and
+              Anwar Hagerbet Kitfo has been a home for genuine Ethiopian cooking for a
+                decade. We started out with a love for true Ethiopian flavors and
                 a wish to bring them to everyone. Our chefs, known for their
                 careful craft and commitment, put together dishes that truly
                 reflect the heart of Japan&apos;s cooking traditions.
